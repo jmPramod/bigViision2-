@@ -53,7 +53,7 @@ export function ImageCarousel() {
   return (
     <Carousel
       plugins={[plugin.current]}
-      className="w-[85%] h-[425px] m-auto"
+      className="w-full h-auto md:h-[425px] m-auto md:w-[85%]"
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
     >
@@ -62,25 +62,25 @@ export function ImageCarousel() {
           <CarouselItem key={index} className="h-full">
             <div className="p-1 h-full">
               <Card className="h-full">
-                <CardContent className="flex  items-center justify-center p-6 gap-3 h-full">
+                <CardContent className="flex flex-col md:flex-row items-center justify-center p-6 gap-3 h-full">
                   <Image
-                    className=" w-1/2 h-full rounded"
+                    className="w-full md:w-1/2 h-full rounded"
                     src={value.image}
                     width={100}
                     height={100}
                     alt={value.name}
                   />
-                  <div className="w-1/2 h-full flex flex-col items-center justify-evenly ">
+                  <div className="w-full  md:w-1/2 h-full flex flex-col items-center justify-evenly ">
                     <h1 className="scroll-m-20 border-b-2 border-blue-700 pb-2 text-2xl font-semibold tracking-tight first:mt-0">
                       {value.name}
                     </h1>
                     <ul
                       className={
-                        'list-disc list-inside grid grid-cols-2 gap-2 '
+                        'list-disc list-inside grid grid-cols-2 gap-0 md:gap-2 '
                       }
                     >
                       {value.features.map((value: string, index: number) => (
-                        <li key={index} className="p-[5px] ">
+                        <li key={index} className="p-0 md:p-[5px] ">
                           {value}
                         </li>
                       ))}
@@ -92,8 +92,10 @@ export function ImageCarousel() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <div className="hidden md:block">
+        <CarouselPrevious />
+        <CarouselNext />
+      </div>
     </Carousel>
   );
 }

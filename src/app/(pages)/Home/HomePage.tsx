@@ -3,7 +3,7 @@ import { ImageCarousel } from './ImageCarousel';
 
 const HomePage = () => {
   return (
-    <div className="border border-black ">
+    <div className="">
       <ImageCarousel />
     </div>
   );
