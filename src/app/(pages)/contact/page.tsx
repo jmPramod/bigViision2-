@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image';
 import React from 'react';
@@ -12,7 +13,7 @@ const page = () => {
     <>
       <div className="flex  justify-center w-full md:flex-row flex-col gap-[15px] p-[15px]">
         <div className="w-full md:w-[50%] border border-black">
-          <Image
+          <img
             className="w-full"
             src="/image/profileImage.JPEG"
             alt=""
@@ -22,7 +23,7 @@ const page = () => {
         </div>
         <div className="w-full md:w-[50%] border  ">
           <div className="flex flex-col items-center justify-between h-full">
-            <div className="p-2">
+            <div className="p-2 flex flex-col gap-4">
               <div>
                 <div className="text-2xl font-bold">About Pravin</div>
                 <div className="font-normal">

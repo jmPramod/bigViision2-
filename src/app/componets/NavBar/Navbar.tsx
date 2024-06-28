@@ -26,6 +26,7 @@ const Navbar = () => {
           width={130}
           height={130}
           alt="logo"
+          onClick={() => router.push('/')}
         />
       </div>
 

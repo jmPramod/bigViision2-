@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 'use client';
 import * as React from 'react';
 import Autoplay from 'embla-carousel-autoplay';
@@ -63,12 +65,11 @@ export function ImageCarousel() {
             <div className="p-1 h-full">
               <Card className="h-full">
                 <CardContent className="flex flex-col md:flex-row items-center justify-center p-6 gap-3 h-full">
-                  <Image
+                  <img
                     className="w-full md:w-1/2 h-full rounded"
                     src={value.image}
                     width={100}
                     height={100}
-                    alt={value.name}
                   />
                   <div className="w-full  md:w-1/2 h-full flex flex-col items-center justify-evenly ">
                     <h1 className="scroll-m-20 border-b-2 border-blue-700 pb-2 text-2xl font-semibold tracking-tight first:mt-0">
