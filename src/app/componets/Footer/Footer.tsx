@@ -1,11 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
-"use client";
-import Image from "next/image";
-import React from "react";
-import { AiOutlineWhatsApp } from "react-icons/ai";
-import { AiFillInstagram } from "react-icons/ai";
-import { AiFillFacebook } from "react-icons/ai";
-import Link from "next/link";
+'use client';
+import Image from 'next/image';
+import React from 'react';
+import { AiOutlineWhatsApp } from 'react-icons/ai';
+import { AiFillInstagram } from 'react-icons/ai';
+import { AiFillFacebook } from 'react-icons/ai';
+import { BsFacebook } from 'react-icons/bs';
+import Link from 'next/link';
 const Footer = () => {
   return (
     <div className="  w-full">
@@ -15,7 +16,7 @@ const Footer = () => {
             <div className="mb-6 md:mb-0">
               <Image
                 className="rounded  "
-                src={"/image/logo.jpg"}
+                src={'/image/logo.jpg'}
                 width={150}
                 height={150}
                 alt="logo"
@@ -55,35 +56,42 @@ const Footer = () => {
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="text-sm text-white sm:text-center dark:text-gray-400">
-              © 2024{" "}
-              <a href="#" className="hover:underline">
+              © 2024{' '}
+              <a href="/" className="hover:underline">
                 Bigviision Printers™
               </a>
               . All Rights Reserved.
             </span>
-            <div className="flex mt-4 sm:justify-center sm:mt-0">
+            <div className="flex mt-4 gap-3 sm:justify-center sm:mt-0">
               <a
                 href="#"
-                className="bg-white hover:text-gray-900 dark:hover:text-white"
+                className="bg-white hover:text-gray-900 dark:hover:text-white rounded-[100%] p-2"
               >
-                <AiFillFacebook size={30} color="#316FF6" />
+                <BsFacebook size={30} color="#316FF6" />
                 <span className="sr-only">Facebook page</span>
               </a>
 
               <Link
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+                className="bg-white hover:text-gray-900 dark:hover:text-white rounded-[100%] p-2"
                 href="https://wa.me/9923257527" // Replace with your number
               >
-                <AiOutlineWhatsApp size={30} />
+                <AiOutlineWhatsApp size={30} color="#25D366" />
               </Link>
 
               <span className="sr-only">whatsapp</span>
 
               <a
                 href="#"
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+                className="bg-white hover:text-gray-900 dark:hover:text-white rounded-[100%] p-2"
               >
-                <AiFillInstagram size={30} />
+                <AiFillInstagram
+                  size={30}
+                  // style={{
+                  //   backgroundColor:
+                  //     'linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);',
+                  // }}
+                  color="#e1306c"
+                />
                 <span className="sr-only">Twitter page</span>
               </a>
             </div>
