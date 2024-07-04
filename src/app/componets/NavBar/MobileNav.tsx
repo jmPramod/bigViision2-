@@ -6,6 +6,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
+  SheetClose,
 } from '@/components/ui/sheet';
 import { useRouter } from 'next/navigation';
 
@@ -22,24 +23,28 @@ export function MobileNav() {
         </SheetTrigger>
         <SheetContent>
           <SheetHeader>
-            <SheetTitle>
-              <Button
-                variant={'custom1'}
-                className="w-full mt-5"
-                onClick={() => router.push('/')}
-              >
-                Home
-              </Button>
-            </SheetTitle>
-            <SheetTitle>
-              <Button
-                variant={'custom1'}
-                className="w-full"
-                onClick={() => router.push('/contact')}
-              >
-                Contact
-              </Button>
-            </SheetTitle>
+            <SheetClose>
+              <SheetTitle>
+                <Button
+                  variant={'custom1'}
+                  className="w-full mt-5"
+                  onClick={() => router.push('/')}
+                >
+                  Home
+                </Button>
+              </SheetTitle>
+            </SheetClose>
+            <SheetClose>
+              <SheetTitle>
+                <Button
+                  variant={'custom1'}
+                  className="w-full"
+                  onClick={() => router.push('/contact')}
+                >
+                  Contact
+                </Button>
+              </SheetTitle>
+            </SheetClose>
           </SheetHeader>
         </SheetContent>
       </div>
